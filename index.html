@@ -1,0 +1,140 @@
+<!DOCTYPE html>    <!--DOCTYPE informa al navegador la version de html-->>
+
+<html lang="es">    <!--html es el elemento raiz de un archivo html. lang, define el idioma de la pagina-->
+
+  <head>    <!--dentro de head podemos incluir el nombre de nuestra pagina, archivos java, css entre otros codigos que se ejecutan en segundo plano pero que permiten que la pagina funcione correctamente-->>
+    <title>programacion HTML</title>    <!--titulo de nuestra pagina web-->
+    <link rel="stylesheet" href="style.css">  <!--link trae los estilos del archivo style.css.-->
+  </head>
+     
+  <body>    <!--dentro de body definimos la estructura de nuestra pagina-->>
+    <main>    <!--todo el contenido de nuestra pagina debe estar dentro de la etiqueta main-->>
+
+      <h1>CURSO DE HTML Y CSS </h1>    <!--h1 crea un titulo o encabezado-->>
+      <h2><s>Formulario:</s></h2>
+
+      <form action="">    <!--form, crea un formulario-->
+        <p>limpiar campos de texto?</p>
+          <button type="reset">aceptar</button> <!--boton con el nombre aceptar. type="reset", limpia todos los campos de texto dentro del formulario-->
+        <hr>
+        <p><strong>Codigo estudiante</strong>:</p>    <!--<strong> aplica negrita a un texto-->
+          <input type="number" placeholder="000" required> <!--creamos un campo de texto tipo numerico-->
+        <p><em>Nombre del estudiante</em></p>    <!--<p>, es un texto. <em>  aplica cursiva a un texto-->
+          <input type="text" required>
+        <p>Elija un rol:</p>
+          <label for="estudiante">
+            <input id="estudiante" type="radio" name="estudiante-instructor" value="estudiante">Estudiante     <!--creamos un boton de tipo radio con el nombre estudiante. name="" permite seleccionar solo un boton-->
+          </label>   
+          <label for="instructor">
+            <input id="instructor" type="radio" name="estudiante-instructor" value="instructor">Instructor    <!--<label> hace mas accesible seleccionar los botones. for="" se le asigna el id del boton. value, indica el valor que se envia al servidor despues de seleccionar el boton-->
+          </label>    
+        <p>Elija su jornada academica:</p> 
+          <label>
+            <input type="checkbox">Jornada diurna  <!--casilla de verificacion tipo checkbox y nombre jornada diurna.-->
+          </label> 
+          <label>
+            <input type="checkbox" checked>Jornada nocturna  <!--checked, permite preseleccionar una casilla-->
+          </label> 
+
+        <form action="https://outlook.live.com/owa/" target="_blank">    <!--<form> crea un formulario. action="" indica la direccion del archivo en el servidor. target="" abre nuestro enlace en una ventana nueva-->
+          <p>Ingrese su email:</p>
+          <input type="text" placeholder="...@hotmail.com" required>    <!--<input> campo de texto que permit ingresar valores por parte del usuario. placeholder, da una pista al usuario de los datos que debe ingresar. required, hace que un campo de texto sea obligatorio-->
+          <button class="env-form" type="submit">enviar formulario</button>    <!--<button> crea un boton. -->
+        </form>
+        
+      </form>
+
+      <hr>    <!--<hr> (horizontal rule) sirve para crear lineas horizontales-->
+
+      <h2>Elija un parrafo:</h2> <!--la etiqueta h2 crea subtitulos. tambien tenemos h3, h4, h5, h6-->
+        <a href="#parrafo-1">parrafo 1</a>  <!--la etiqueta <a> permite convertir una parte de nuestro texto en enlace, en este caso vamos acceder al parrafo 1 de nuestra pagina.-->
+        <a href="#parrafo-2">parrafo 2</a>    <!--href="#parrafo-2" nos direcciona a un enlace, en este caso al parrafo 2. si escribimos href="#" el enlace nonos lleva a ningun lado-->
+
+      <h2 id="parrafo-1"> Parrafo 1 </h2>
+        <p>Los lenguajes de programacion nos permiten crear aplicaciones web, aplicaciones moviles y mucho mas. Para la creacion de <br>  nuestras aplicaciones contamos con multiples entornos de desarrollo, librerias y muchas herramientas. Aunque hoy en dia es facil <br>  acceder a estos recursos, podemos resaltar la complejidad de algunos lenguales de programacion, lo cual se puede solucionar <br> 
+        con  dedicacion y disciplina. </p>  <!--p, crea un parrafo. <br>, hace salto de linea-->> 
+      <h2 id="parrafo-2"> Parrafo 2 </h2>    <!--etiqueta coorespondiente a un subtitulo-->
+        <p>Existen muchos lenguajes de programacion y podemos elegir el que mas nos guste de acuerdo al area de desarrollo en el cual <br>
+          nos gustaria trabajar.Dentro de nuestros lenguajes mas populares tenemos Java, Python, c++ y <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener noreferrer">JavaScrip</a> </p>    <!--la etiqueta <a> nos permite convertir una parte de nuestro parrafo en un enlace, en la etiqueta de apertura <a> debemos especificar el atributo href=""con el enlace al cual queremos redireccionar. target="_blank" nos permite abrir nuestro enlace en una ventana nueva. rel="" previene los ataques Tabnabbingn -->>
+      <hr> 
+
+      <h3>Programador fullstack:</h3>
+
+      <a href="https://www.google.com/search?q=imagenes+programador+full+stack&oq=imagenes+programador+fu&aqs=chrome.1.69i57j33i160l4.18345j0j7&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+        <img class="ferri" src="ferri.JPG" alt="imagen de ferri">  <!--class es la identidad de esta imagen-->
+      </a>    <!--convertimos el logo de python en un enlace-->
+  
+      <hr>
+
+      <div>    <!--<div> es un contenedor. los estilos aplicados a div tambien se aplican a todo lo que hay en su interior-->
+        <h2>Lista no ordenada de mis lenguajes favoritos:</h2>    
+
+          <ul>    <!--<ul> es una lista no ordenada (unordered list)-->
+            <li>python</li>    <!--<li> es una lista de elementos (item list), muestra los elementos de la lista con viñetas-->
+            <li>java</li>
+            <li>c++</li>
+          </ul>
+        
+        <h2>Lista ordenada de lenguajes mas buscados:</h2>   <!--<em> aplica cursiva a un texto-->
+
+          <ol>    <!--<ol> es una lista ordenada (ordered list), muestra los elementos de la lista con numeros-->
+            <li>ruby</li>
+            <li>kotling</li>
+            <li>haskell</li>
+          </ol>
+
+      </div>
+
+      <hr>
+
+      <div class="haciendo-padding">
+        <h2>Un dia de relax para un programador:</h2>
+        <img class="laguna" src="laguna.jpg" alt="imagen  la laguna">
+      <div>
+
+      <hr>
+     
+      <h2>Unidades absolutas y relativas:</h2>
+
+      <div id="contenedor-unidades">
+        <div class="rectangulo px">200px de ancho</div>
+        <div class="rectangulo vw">20vw de ancho</div>
+        <div class="rectangulo em">15em de ancho</div>
+      </div>
+
+      <hr>
+
+      <h2>Paginacion simple:</h2>
+
+      <div class="cont-pag">
+        <a href="#">&laquo;</a>
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+      <hr>
+
+      <h2>HTML Input Types:</h2>
+
+      <ul>
+        <li> <input type="text" placeholder="text"> </li>
+        <li> <input type="password" placeholder="password"> </li>
+        <li> <input type="number" placeholder="number"> </li>
+        <li> <input type="color"> </li>
+        <li> <input type="file"> </li>
+        <li> <input type="range"> </li>
+        <li> <input type="checkbox"> </li>
+        <li> <input type="radio"> </li>
+        <li> <input type="date"> </li>
+        <li> <input type="time"> </li>
+        <li> <input type="month"> </li>
+      </ul>
+
+    </main>
+    <footer>    <!--<footer> crea un pie de pagina y debe estar fuera del main ya que no forma parte del contenido principal.-->
+      <p><small>este es un pied e pagina...</small></p>    <!--<small> disminuye el tamaño de fuente-->
+    </footer>    
+  </body>
+</html>

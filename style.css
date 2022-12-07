@@ -1,0 +1,141 @@
+/*aplicar estilo a body:*/
+
+body {
+  background-color: silver;
+
+ }
+
+/*selector de tipo: aplica un estilo a todos los h1 de la pagina */
+/* NOTA: class tiene prioridad soble los selectores de tipo */
+/* Nota: los Id tienen prioridad sobre las clases al momento de aplicar estilos: */
+/* NOTA: los estilos en linea tiene prioridad sobre los Id y las class */
+
+
+h1 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration-line: underline;
+  top: 10%;
+  left: 35%;  /*mover el texto a la izquierda */
+  position: relative;
+
+}
+
+/*aplicar un estilo cuando se pasar el cursor sobre h1*/
+
+h1:hover {
+  font-size: 35px;
+}
+
+ul {
+  font-size: 20px;
+  color: black;
+}
+
+#parrafo-1 {
+  font-size: 30px;
+}
+
+/*selector de clase:*/
+
+.laguna {
+  border-radius: 60px;
+  width: 200px;
+  padding: 5px 4px 5px 4px;  /*padding para todos los bordes*/
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+/*SELECTORES DE ATRIBUTO: selecciona un elemento con un determinado atributo*/
+/* en el siguiente ejemplo aplicamos un estilo a todas las imagenes con el atributo [alt] */
+
+/*img[alt] {
+  border-radius: 50%; 
+} */
+
+/* aqui seleccionamos todo los botones de tipo radio para aplicarles estilo: */
+
+input[type="radio"] {
+  margin: 10px;
+}
+
+#contenedor-unidades {
+  padding: 5px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.rectangulo {
+  padding: 5px;
+  margin: 5px;
+}
+
+/*UNIDADES ABSOLUTAS Y RELATIVAS */
+/*px: unidad relativa
+vw: unidad relativa, se ajusta al tamaño de la ventana principal
+em: unudad relativa al tamaño del texto*/
+
+ .px{
+  background-color: green;
+  width: 200px;
+ }
+
+ .vw {  
+  background-color: greenyellow;
+  width: 20vw;
+ }
+
+ .em{
+  background-color: aquamarine;
+  width: 15em;
+ }
+
+ /*variables CSS:*/
+
+ .laguna {
+  --laguna-tota: black;  /*variable laguna-tota */
+  border-color: var(--laguna-tota);  /*haciendo uso de la variable laguna-tota */
+ }
+
+ /*declarar una variable global en CSS*/
+
+ :root {
+  --laguna-tota: black;
+ }
+
+ /*estilo boton formulario*/
+
+ .env-form:hover {
+  cursor: pointer;
+  font-size: large;
+ }
+
+ /*estilo imegen de class ferri*/
+
+ .ferri {
+  margin: 15px;
+  /*margin 15 px 10px 15px 10px; */ /*margenes opcion 2 */
+  width: 250px;  /*ancho de la imagen*/
+  border-width: 2px;
+  border-color: black;
+  border-style: dashed;
+ }
+
+ /*aplicar estilo cont-pag*/
+
+ .cont-pag a {
+  color:black;
+  padding: 5px 10px;
+  transition: background-color .2s;
+
+ }
+
+ .cont-pag a.active {
+  background-color: rgba(0, 0, 255, 0.301);
+  color: white;
+ }
+ 
+ .cont-pag a:hover:not(.active){
+  background-color: azure;
+ }
